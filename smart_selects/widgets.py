@@ -1,13 +1,14 @@
-import locale
-
 import django
 
 from django.conf import settings
 from django.contrib.admin.templatetags.admin_static import static
 from django.core.urlresolvers import reverse
-from django.db.models import get_model
-from django.forms.widgets import Select
+from django.forms.widgets import Select, SelectMultiple
+from django import forms
 from django.utils.safestring import mark_safe
+from django.utils.encoding import force_text
+from django.utils.html import escape
+import json
 
 from smart_selects.utils import unicode_sorter
 
