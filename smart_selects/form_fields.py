@@ -1,6 +1,5 @@
 try:
-    from django.apps import apps
-    model = apps.get_model('app_name', 'model_name')
+    django.apps.apps.get_model
 except ImportError:
     from django.apps.apps import get_model
 from django.forms.models import ModelChoiceField, ModelMultipleChoiceField
