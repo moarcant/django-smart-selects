@@ -12,6 +12,11 @@ import json
 
 from smart_selects.utils import unicode_sorter
 
+try:
+    django.apps.apps.get_model
+except ImportError:
+    from django.apps.apps import get_model
+
 
 if django.VERSION >= (1, 2, 0) and getattr(settings,
                                            'USE_DJANGO_JQUERY', True):
