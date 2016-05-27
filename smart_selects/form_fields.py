@@ -1,4 +1,5 @@
 try:
+    import django
     django.apps.apps.get_model
 except ImportError:
     from django.apps.apps import get_model
